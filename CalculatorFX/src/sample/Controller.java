@@ -29,7 +29,10 @@ public class Controller {
             numberTwo = Integer.parseInt(output.getText());
             String text = calculate.getResult(numberOne,numberTwo,operator);
             output.setText("");
-            helpOutput.setText(helpOutput.getText()+ numberTwo + "="+text);
+            if(numberOne == 0)
+                helpOutput.setText(numberTwo + "=" + text);
+            else
+                helpOutput.setText(helpOutput.getText()+ numberTwo + "="+text);
             operator = "";
             numberOne = 0;
             numberTwo = 0;
